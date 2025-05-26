@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { saveNote } from '@/lib/storage'; 
 import uuid from 'react-native-uuid'; 
 
+
 export default function AddNoteScreen() {
   const router = useRouter();
   const [text, setText] = useState('');
@@ -34,6 +35,7 @@ export default function AddNoteScreen() {
         style={styles.input}
       />
       <Button title="Save Note" onPress={handleSave} />
+     
     </View>
   );
 }

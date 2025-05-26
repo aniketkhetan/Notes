@@ -4,6 +4,7 @@ import { View, FlatList, Text, Pressable, StyleSheet } from 'react-native';
 import { getNotes, Note } from '@/lib/storage';
 import { useRouter } from 'expo-router';
 
+
 export default function HomeScreen() {
   const [notes, setNotes] = useState<Note[]>([]);
   const router = useRouter();
