@@ -34,7 +34,7 @@ export default function AddNoteScreen() {
         multiline
         style={styles.input}
       />
-      <Button title="Save Note" onPress={handleSave} />
+      <Button  title="Save Note" onPress={handleSave} />
      
     </View>
   );
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   container: { flex: 1, padding: 20 },
   input: {
     borderColor: '#ccc',
-    borderWidth: 1,
+    borderWidth: 0,
     padding: 15,
     borderRadius: 8,
     minHeight: 150,

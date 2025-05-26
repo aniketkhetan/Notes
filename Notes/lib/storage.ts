@@ -28,3 +28,18 @@ export async function getNotes(): Promise<Note[]> {
     return [];
   }
 }
+
+export async function updateNote(updatedNote: Note) {
+  const notes = await getNotes();
+  const newNotes = notes.map(note =>
+    note.id === updatedNote.id ? updatedNote : note
+  );
+  await AsyncStorage.setItem(NOTES_KEY, JSON.stringify(newNotes));
+}
+
+export async function deleteNote(id: string) {
+  const existing = await getNotes();
+  const updated = existing.filter(note => note.id !== id);
+  await AsyncStorage.setItem(NOTES_KEY, JSON.stringify(updated));
+}
+

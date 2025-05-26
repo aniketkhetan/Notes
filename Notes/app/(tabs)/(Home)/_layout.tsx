@@ -5,6 +5,7 @@ export default function NotesLayout() {
     <Stack>
       <Stack.Screen name="index" options={{ title: "My Notes" }} />
       <Stack.Screen name="AddNotes" options={{title: "New Note"}} />
+      <Stack.Screen name="[id]" options={{title:"Edit Note"}} />
     </Stack>
   )
 }
